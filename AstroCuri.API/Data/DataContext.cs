@@ -1,9 +1,11 @@
 ﻿using AstroCuri.Shared.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AstroCuri.API.Data
-{
-    public class DataContext :DbContext
+{    
+    //el identity permite tener una mejor gestión con los usuarios y sus role (sofía)
+    public class DataContext : IdentityDbContext<User>
 
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
@@ -17,7 +19,7 @@ namespace AstroCuri.API.Data
             base.OnModelCreating(modelBuilder);
             //El campo que se va a repetir seria UserId
             //Le pone un indices al campo UserId y le decimos que es unico
-            modelBuilder.Entity<User>().HasIndex(c => c.UserId).IsUnique();
+            modelBuilder.Entity<User>().HasIndex(c => c.FirstName).IsUnique();
         }
     }
 }
