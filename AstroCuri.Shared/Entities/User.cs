@@ -1,4 +1,5 @@
 ﻿using AstroCuri.Shared.Entities.Enums;
+using AstroCuri.Shared.Enums;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -13,19 +14,33 @@ namespace AstroCuri.Shared.Entities
     public class User : IdentityUser
     {
 
-        [Required(ErrorMessage = "El Id del usuario es requerido")]
-        public int UserId { get; set; }
+        [Display(Name = "Documento")]
+        [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public string Document { get; set; } = null!;
 
-        [Required(ErrorMessage = "El Nombre es requerido")]
-        public string FirstName { get; set; } = null;
+        [Display(Name = "Nombres")]
+        [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public string FirstName { get; set; } = null!;
 
-        [Required(ErrorMessage = "El Apellido es requerido")]
-        public string LastName { get; set; } = null;
+        [Display(Name = "Apellidos")]
+        [MaxLength(50, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public string LastName { get; set; } = null!;
 
-        [Required(ErrorMessage = "El Correo es requerido")]
-        public string Address { get; set; } = null;
-        public string FullName => $"{FirstName} " +
-            $"{LastName}";
+        [Display(Name = "Dirección")]
+        [MaxLength(200, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public string Address { get; set; } = null!;
+
+       
+
+        [Display(Name = "Tipo de usuario")]
+        public UserType UserType { get; set; }
+
+        [Display(Name = "Usuario")]
+        public string FullName => $"{FirstName} {LastName}";
 
 
 

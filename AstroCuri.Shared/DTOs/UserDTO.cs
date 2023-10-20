@@ -10,18 +10,17 @@ namespace AstroCuri.Shared.DTOs
 {
     public  class UserDTO: User
     {
-        [Required(ErrorMessage = "El Id del usuario es requerido")]
-        public int UserId { get; set; }
+        [DataType(DataType.Password)]
+        [Display(Name = "Contraseña")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "El campo {0} debe tener entre {2} y {1} carácteres.")]
+        public string Password { get; set; } = null!;
 
-        [Required(ErrorMessage = "El Nombre es requerido")]
-        public string FirstName { get; set; } = null;
-
-        [Required(ErrorMessage = "El Apellido es requerido")]
-        public string LastName { get; set; } = null;
-
-        [Required(ErrorMessage = "El Correo es requerido")]
-        public string Address { get; set; } = null;
-        public string FullName => $"{FirstName} " +
-            $"{LastName}";
+        [Compare("Password", ErrorMessage = "La contraseña y la confirmación no son iguales.")]
+        [Display(Name = "Confirmación de contraseña")]
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "El campo {0} debe tener entre {2} y {1} carácteres.")]
+        public string PasswordConfirm { get; set; } = null!;
     }
 }

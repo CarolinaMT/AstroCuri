@@ -14,6 +14,8 @@ namespace AstroCuri.Shared.Enums
         Ninguno = 0,
         Seguidor = 1,
         Seguido = 2,
-        Ambos = Seguidor | Seguido
+        Ambos = Seguidor | Seguido,
+        Admin
     }
 }
+//el admin se crea automaticamente en seedDb ya que es el que puede hacer lo que quiera.

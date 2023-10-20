@@ -23,8 +23,4 @@
     <ProjectReference Include="..\AstroCuri.Shared\AstroCuri.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
