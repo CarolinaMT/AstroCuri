@@ -2,7 +2,7 @@
 using AstroCuri.Shared.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using AstroCuri.Shared.Entities;
+using AstroCuri.Shared.DTOs;
 
 namespace AstroCuri.API.Helpers
 {

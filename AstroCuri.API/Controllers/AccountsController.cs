@@ -5,13 +5,14 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using AstroCuri.API.Helpers;
 
 namespace AstroCuri.API.Controllers
 { 
     //para controlar las cuentas(sofía)
     [ApiController]
     [Route("/api/accounts")]
-    public class AccountsController
+    public class AccountsController : ControllerBase
     {
         private readonly IUserHelper _userHelper;
         private readonly IConfiguration _configuration;
@@ -80,5 +81,6 @@ namespace AstroCuri.API.Controllers
                 Expiration = expiration
             };
         }
+
     }
 }

@@ -17,6 +17,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+
 //autenticación mediante tokens (sofía)
 builder.Services.AddSwaggerGen(c =>
 {
@@ -55,7 +58,7 @@ builder.Services.AddSwaggerGen(c =>
 //es el servicio que nos va a permitir conectarnos con la bases de datos
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=DefaultConnection"));
 
-builder.Services.AddScoped<IUserHelper, UserHelper>();
+builder.Services.AddScoped<IUserHelper,UserHelper>();
 
 //requisitos de seguridad de las contraseñas (sofía)
 builder.Services.AddIdentity<User, IdentityRole>(x =>

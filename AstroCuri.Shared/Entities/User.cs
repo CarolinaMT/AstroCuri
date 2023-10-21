@@ -1,4 +1,4 @@
-﻿using AstroCuri.Shared.Entities.Enums;
+﻿
 using AstroCuri.Shared.Enums;
 using Microsoft.AspNetCore.Identity;
 using System;

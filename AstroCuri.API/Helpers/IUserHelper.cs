@@ -1,4 +1,5 @@
-﻿using AstroCuri.Shared.Entities;
+﻿using AstroCuri.Shared.DTOs;
+using AstroCuri.Shared.Entities;
 using Microsoft.AspNetCore.Identity;
 
 
@@ -6,8 +7,8 @@ namespace AstroCuri.API.Helpers
 {
     public interface IUserHelper
     {
-        public interface IUserHelper
-        {
+        
+        
             Task<User> GetUserAsync(string email);
 
             Task<IdentityResult> AddUserAsync(User user, string password);
@@ -23,6 +24,6 @@ namespace AstroCuri.API.Helpers
             Task LogoutAsync();
 
 
-        }
+        
     }
 }
