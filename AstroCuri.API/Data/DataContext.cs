@@ -12,6 +12,11 @@ namespace AstroCuri.API.Data
         {
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Link> Links { get; set; }
+        public DbSet<Photography> Photographies{ get; set; }
         //Todos los indices los ponemos desde aqui
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

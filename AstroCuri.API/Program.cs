@@ -83,6 +83,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwtKey"]!)),
         ClockSkew = TimeSpan.Zero
     });
+builder.Services.AddLogging(loggingBuilder =>
+{
+    // Configura el logger según tus necesidades
+    loggingBuilder.AddConsole(); // Ejemplo de logger de consola
+    loggingBuilder.AddDebug();   // Ejemplo de logger de depuración
+    // Puedes agregar otros proveedores de registro según sea necesario
+});
+
 
 var app = builder.Build();
 
@@ -101,5 +109,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 app.Run();

@@ -29,7 +29,7 @@ namespace AstroCuri.API.Controllers
         public async Task<ActionResult> Get()
         {
 
-            return Ok(await _context.Liks.ToListAsync());
+            return Ok(await _context.Links.ToListAsync());
 
 
         }
@@ -41,7 +41,7 @@ namespace AstroCuri.API.Controllers
 
             //200 Ok
 
-            var Link = await _context.Liks.FirstOrDefaultAsync(x => x.Id == id);
+            var Link = await _context.Links.FirstOrDefaultAsync(x => x.Id == id);
 
             if (Link == null)
             {
@@ -67,11 +67,11 @@ namespace AstroCuri.API.Controllers
         // Actualizar o cambiar registro
 
         [HttpPut]
-        public async Task<ActionResult> Put(link link)
+        public async Task<ActionResult> Put(Link Link)
         {
-            _context.Update(link);
+            _context.Update(Link);
             await _context.SaveChangesAsync();
-            return Ok(link);
+            return Ok(Link);
         }
 
         // ELiminar registros

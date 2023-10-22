@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroCuri.Shared", "AstroCuri.Shared\AstroCuri.Shared.csproj", "{27704F64-FD58-41CA-80E7-0C7579623692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroCuri.Shared", "AstroCuri.Shared\AstroCuri.Shared.csproj", "{27704F64-FD58-41CA-80E7-0C7579623692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroCuri.API", "AstroCuri.API\AstroCuri.API.csproj", "{D8C2227D-FF56-4E0F-86F4-473059F2DBEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroCuri.API", "AstroCuri.API\AstroCuri.API.csproj", "{D8C2227D-FF56-4E0F-86F4-473059F2DBEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstroCuri.WEB", "AstroCuri.WEB\AstroCuri.WEB.csproj", "{7ADF5C24-9BBE-4562-A609-5C7754F214D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AstroCuri.WEB", "AstroCuri.WEB\AstroCuri.WEB.csproj", "{7ADF5C24-9BBE-4562-A609-5C7754F214D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
