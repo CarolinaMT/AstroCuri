@@ -14,7 +14,7 @@ namespace AstroCuri.Shared.Entities
     public class User : IdentityUser
     {
 
-        [Display(Name = "Documento")]
+        [Display(Name = "Id")]
         [MaxLength(20, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Document { get; set; } = null!;
