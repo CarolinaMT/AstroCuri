@@ -34,7 +34,7 @@ namespace AstroCuri.API.Controllers
 
         // Get por parámetro
         [HttpGet("{id:int}")]
-        public async Task<ActionResult> Get(int id)
+        public async Task<ActionResult> Get(string id)
         {
 
             //200 Ok
@@ -75,7 +75,7 @@ namespace AstroCuri.API.Controllers
         // ELiminar registros
 
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(string id)
         {
 
 
